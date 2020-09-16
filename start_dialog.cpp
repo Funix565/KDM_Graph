@@ -2,6 +2,7 @@
 #include "ui_start_dialog.h"
 #include "start_type.h"
 #include <QDebug>
+#include <QMessageBox>
 
 Start_Dialog::Start_Dialog(QWidget *parent) :
     QDialog(parent),
@@ -31,13 +32,15 @@ TStartM *Start_Dialog::retData() const
     int __rows;
     int __clmns;
     bool __dir;
-    bool __undir;
+    bool __matr_adj;
 
     // Отримуємо розмiр таблицi та тип графа
     __rows = ui->spinBox_rows->value();
     __clmns = ui->spinBox_clmns->value();
     __dir = ui->radioButton_dir->isChecked();
-    __undir = ui->radioButton_undir->isChecked();
+    __matr_adj = ui->radioButton_adj->isChecked();
+
+    qDebug() << "matr = " << __matr_adj;
 
     TStartM *PData = new TStartM;
 
@@ -45,14 +48,26 @@ TStartM *Start_Dialog::retData() const
     PData->clmns = __clmns;
     PData->rows = __rows;
     PData->dir = __dir;
-    PData->undir = __undir;
+    PData->matr_adj = __matr_adj;
 
-    //emit send_data(PData);
-
-     return PData;
+    return PData;
 }
 
 void Start_Dialog::on_pushButton_start_clicked()
 {
-    accept();
+    if (ui->radioButton_adj->isChecked())
+    {
+        if (ui->spinBox_clmns->value() == ui->spinBox_rows->value())
+        {
+            accept();
+        }
+        else
+        {
+            QMessageBox::warning(this, "Invalid size", "Adjacency matrix has to be square");
+        }
+    }
+    else
+    {
+        accept();
+    }
 }

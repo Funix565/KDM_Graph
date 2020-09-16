@@ -16,6 +16,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    void MakeAdjMatrix(TStartM *dt);
+    void MakeIncMatrix(TStartM *dt);
+
 private:
     Ui::MainWindow *ui;
 };

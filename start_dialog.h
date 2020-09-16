@@ -16,7 +16,7 @@ public:
     explicit Start_Dialog(QWidget *parent = 0);
     ~Start_Dialog();
 
-    TStartM* retData() const;  // повернення вихiдних даних
+    TStartM* retData() const;  // Повернення вихiдних даних
 
 private slots:
     void on_pushButton_start_clicked();
