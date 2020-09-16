@@ -1,6 +1,7 @@
 #include "start_dialog.h"
 #include "ui_start_dialog.h"
 #include "start_type.h"
+#include <QDebug>
 
 Start_Dialog::Start_Dialog(QWidget *parent) :
     QDialog(parent),
@@ -8,7 +9,7 @@ Start_Dialog::Start_Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // Вставновлення м?н?мальних даних для роботи
+    // Вставновлення мiнiмальних даних для роботи
     ui->spinBox_clmns->setMinimum(3);
     ui->spinBox_rows->setMinimum(3);
 
@@ -24,7 +25,7 @@ Start_Dialog::~Start_Dialog()
     delete ui;
 }
 
-// Ф-цiя повернення вихiдних даних
+ //Ф-цiя повернення вихiдних даних
 TStartM *Start_Dialog::retData() const
 {
     int __rows;
@@ -40,17 +41,18 @@ TStartM *Start_Dialog::retData() const
 
     TStartM *PData = new TStartM;
 
-    // Заносимо у вказ?вник для повернення
+    // Заносимо у вказiвник для повернення
     PData->clmns = __clmns;
     PData->rows = __rows;
     PData->dir = __dir;
     PData->undir = __undir;
 
-    return PData;
+    //emit send_data(PData);
+
+     return PData;
 }
 
 void Start_Dialog::on_pushButton_start_clicked()
 {
-
     accept();
 }
