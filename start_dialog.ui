@@ -107,6 +107,19 @@
     <string>and the type of graph</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_start">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>250</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
@@ -128,6 +141,9 @@
      <widget class="QRadioButton" name="radioButton_undir">
       <property name="text">
        <string>undirected</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </item>

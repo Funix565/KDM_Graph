@@ -30,7 +30,8 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    start_dialog.h
+    start_dialog.h \
+    start_type.h
 
 FORMS += \
         mainwindow.ui \
