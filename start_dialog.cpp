@@ -9,7 +9,7 @@ Start_Dialog::Start_Dialog(QWidget *parent) :
     ui(new Ui::Start_Dialog)
 {
     ui->setupUi(this);
-
+    // mg ubrat' ogranicheniya ??????
     // Вставновлення мiнiмальних даних для роботи
     ui->spinBox_clmns->setMinimum(3);
     ui->spinBox_rows->setMinimum(3);
