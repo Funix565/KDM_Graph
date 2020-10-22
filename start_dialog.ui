@@ -6,19 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>428</width>
+    <height>329</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+background-color: #f8ffff;
+}</string>
+  </property>
   <widget class="QLabel" name="label_prompt">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>-1</x>
      <y>20</y>
-     <width>400</width>
+     <width>401</width>
      <height>25</height>
     </rect>
    </property>
@@ -29,6 +34,9 @@
    </property>
    <property name="text">
     <string>Choose the size of the table you want to transform</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QSpinBox" name="spinBox_rows">
@@ -116,6 +124,23 @@
      <height>28</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+     <strikeout>false</strikeout>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+border-style: solid;
+background-color: #ffb65a;
+color: #ffffff;
+}
+QPushButton::hover {
+background-color: #e7a552;
+}</string>
+   </property>
    <property name="text">
     <string>Start</string>
    </property>
@@ -167,7 +192,7 @@
     <string>Initial matrix</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>100</x>

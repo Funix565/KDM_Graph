@@ -9,6 +9,7 @@ Start_Dialog::Start_Dialog(QWidget *parent) :
     ui(new Ui::Start_Dialog)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Lab -1- Data");
 
     // Вставновлення мiнiмальних даних для роботи
     ui->spinBox_clmns->setMinimum(3);
@@ -39,8 +40,6 @@ TStartM *Start_Dialog::retData() const
     __clmns = ui->spinBox_clmns->value();
     __dir = ui->radioButton_dir->isChecked();
     __matr_adj = ui->radioButton_adj->isChecked();
-
-    qDebug() << "matr = " << __matr_adj;
 
     TStartM *PData = new TStartM;
 

@@ -13,12 +13,20 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+background-color: #f8ffff;
+}</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QTableWidget" name="tableWidget_adj">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>140</y>
+      <y>130</y>
       <width>300</width>
       <height>290</height>
      </rect>
@@ -28,7 +36,7 @@
     <property name="geometry">
      <rect>
       <x>540</x>
-      <y>140</y>
+      <y>130</y>
       <width>300</width>
       <height>290</height>
      </rect>
@@ -37,8 +45,8 @@
    <widget class="QPushButton" name="pushButton_toInc">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>180</y>
+      <x>180</x>
+      <y>90</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -47,11 +55,11 @@
      <string>Adj to Inc</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_toInc_2">
+   <widget class="QPushButton" name="pushButton_toAdj">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>230</y>
+      <x>540</x>
+      <y>90</y>
       <width>93</width>
       <height>28</height>
      </rect>
@@ -63,8 +71,8 @@
    <widget class="QLabel" name="label_adj">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>100</y>
+      <x>20</x>
+      <y>90</y>
       <width>150</width>
       <height>25</height>
      </rect>
@@ -78,11 +86,11 @@
      <string>Adjacency matrix</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_inc">
     <property name="geometry">
      <rect>
-      <x>590</x>
-      <y>110</y>
+      <x>690</x>
+      <y>100</y>
       <width>150</width>
       <height>25</height>
      </rect>
@@ -94,6 +102,52 @@
     </property>
     <property name="text">
      <string>Incidence matrix</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_rel">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>90</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border-style: solid;
+background-color: #08cf45;
+color: #ffffff;
+}</string>
+    </property>
+    <property name="text">
+     <string>New init Matrix</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>200</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiLight</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Hyzha &amp; Denkin Lab -1-</string>
     </property>
    </widget>
   </widget>

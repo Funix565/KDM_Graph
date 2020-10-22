@@ -26,13 +26,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    start_dialog.cpp
+    start_dialog.cpp \
+    dgraph_draw.cpp
 
 HEADERS += \
         mainwindow.h \
     start_dialog.h \
-    start_type.h
+    start_type.h \
+    dgraph_draw.h
 
 FORMS += \
         mainwindow.ui \
-    start_dialog.ui
+    start_dialog.ui \
+    dgraph_draw.ui
